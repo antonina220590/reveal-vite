@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>reveal.js</title>
-    <script type="module" crossorigin src="./assets/index-C6OLh_6R.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DFOSH9xs.css">
+    <script type="module" crossorigin src="./assets/index-CGwDVBLf.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BM8p2xPV.css">
   </head>
   <body>
     <div class="reveal">
@@ -41,8 +41,54 @@
           <h2>The OWASP Top 10</h2>
           <img src="./OWASP_top_10.jpg" />
         </section>
+        <section>
+          <h2>Example of Insecure design Attack</h2>
+          <img src="./insecure_design.jpg">
+        </section>
+        <section>
+          <h2>Prevention of Insecure design risks</h2>
+          <ul>
+          <li class="prevention">Establish and use a secure development lifecycle with AppSec professionals to help evaluate and design security and privacy-related controls</li>
+          <li class="prevention">Use threat modeling for critical authentication, access control, business logic, and key flows</li>
+          <li class="prevention">Write unit and integration tests to validate that all critical flows are resistant to the threat model. Compile use-cases _and_ misuse-cases for each tier of your application</li>
+          <li class="prevention">Establish and use a library of secure design patterns or paved road ready to use components</li>
+          <li class="prevention">Integrate security language and controls into user stories</li>
+          <li class="prevention">Integrate plausibility checks at each tier of your application (from frontend to backend)</li>
+          <li class="prevention">Segregate tier layers on the system and network layers depending on the exposure and protection needs</li>
+          <li class="prevention">Segregate tenants robustly by design throughout all tiers</li>
+          <li class="prevention">Limit resource consumption by user or service</li>
+        </ul>
+        </section>
+        <section>
+          <h2>Example of Vulnerable and Outdated Components Attack</h2>
+          <img src="./Outdated_components.jpg">
+        </section>
+        <section>
+          <h2>Prevention of Vulnerable and Outdated Components risks</h2>
+          <ul>
+          <li class="prevention">Remove unused dependencies, unnecessary features, components, files, and documentation.</li>
+          <li class="prevention">Only obtain components from official sources over secure links.</li>
+          <li class="prevention"> Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.</li>
+          <li class="prevention">Continuously inventory the versions of both client-side and server-side components (e.g., frameworks, libraries) and their dependencies using tools like versions, OWASP Dependency Check, retire.js, etc. Continuously monitor sources like Common Vulnerability and Exposures (CVE) and National Vulnerability Database (NVD) for vulnerabilities in the components. Use software composition analysis tools to automate the process. Subscribe to email alerts for security vulnerabilities related to components you use.</li>
+        </ul>
+        </section>
+        <section>
+          <h2>Example of Injection Attack</h2>
+          <img src="./Injection.jpg">
+        </section>
+        <section>
+          <h2>Prevention of Injection risks</h2>
+          <ul>
+          <li class="prevention"> The preferred option is to use a safe API, which avoids using the interpreter entirely, provides a parameterized interface, or migrates to Object Relational Mapping Tools (ORMs).</li>
+          <li class="prevention"> Use positive server-side input validation. This is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications.</li>
+          <li class="prevention"> For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter.</li>
+          <li class="prevention"> Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.</li>
+        </ul>
+        </section>
+        <section>
+          <p>Thank you for attention!</p>
+        </section>
       </div>
     </div>
-
   </body>
 </html>
